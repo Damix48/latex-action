@@ -84,7 +84,9 @@ fi
 
 if [[ -n "$extra_system_packages" ]]; then
   for pkg in $extra_system_packages; do
-    tlmgr option repository ftp://tug.org/historic/systems/texlive/2017/tlnet-final
+    wget http://mirror.ctan.org/systems/texlive/tlnet/update-tlmgr-latest.sh
+    ./update-tlmgr-latest.sh
+    tlmgr option repository http://ctan.ebinger.cc/tex-archive/systems/texlive/tlnet/
     info "Install $pkg by tlmgr"
     tlmgr install --reinstall "$pkg"
   done
