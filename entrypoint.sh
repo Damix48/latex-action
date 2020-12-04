@@ -84,6 +84,7 @@ fi
 
 if [[ -n "$extra_system_packages" ]]; then
   for pkg in $extra_system_packages; do
+    tlmgr option repository http://ctan.ebinger.cc/tex-archive/systems/texlive/tlnet/
     info "Install $pkg by tlmgr"
     tlmgr install --reinstall "$pkg"
   done
