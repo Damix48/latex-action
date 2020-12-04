@@ -1,4 +1,4 @@
-FROM mirisbowring/texlive_ctan_full:2017-final
+FROM mirisbowring/texlive_ctan_basic:2017-final
 
 COPY \
   LICENSE \
