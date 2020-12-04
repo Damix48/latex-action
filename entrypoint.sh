@@ -85,6 +85,7 @@ fi
 if [[ -n "$extra_system_packages" ]]; then
   for pkg in $extra_system_packages; do
     wget http://mirror.ctan.org/systems/texlive/tlnet/update-tlmgr-latest.sh
+    chmod 777 ./update-tlmgr-latest.sh
     ./update-tlmgr-latest.sh
     tlmgr option repository http://ctan.ebinger.cc/tex-archive/systems/texlive/tlnet/
     info "Install $pkg by tlmgr"
