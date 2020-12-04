@@ -84,8 +84,8 @@ fi
 
 if [[ -n "$extra_system_packages" ]]; then
   for pkg in $extra_system_packages; do
-    info "Install $pkg by apk"
-    apk --no-cache add "$pkg"
+    info "Install $pkg by tlmgr"
+    tlmgr install "$pkg"
   done
 fi
 
