@@ -85,7 +85,7 @@ fi
 if [[ -n "$extra_system_packages" ]]; then
   for pkg in $extra_system_packages; do
     info "Install $pkg by tlmgr"
-    tlmgr install "$pkg"
+    tlmgr install --reinstall "$pkg"
   done
 fi
 
