@@ -1,4 +1,4 @@
-FROM ghcr.io/xu-cheng/texlive-full:latest
+FROM mirisbowring/texlive_ctan_full:2017-final
 
 COPY \
   LICENSE \
